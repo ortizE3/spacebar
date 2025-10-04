@@ -1,4 +1,3 @@
-import React from 'react'
 import ProjectHero from '../../../components/ProjectHero/ProjectHero'
 import ProjectDescription from '../../../components/ProjectDescription/ProjectDescription'
 

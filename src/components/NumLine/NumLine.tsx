@@ -1,4 +1,3 @@
-import React from 'react'
 import type { NumLineProps } from '../../models/Props/NumLineProps'
 
 function NumLine(props: NumLineProps) {

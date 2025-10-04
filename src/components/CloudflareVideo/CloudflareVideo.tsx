@@ -69,7 +69,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
             <video
                 preload="auto"
                 ref={videoRef}
-                autoPlay
+                autoPlay={autoPlay}
                 muted
                 loop={loop}
                 playsInline

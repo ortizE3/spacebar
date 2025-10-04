@@ -18,7 +18,7 @@ import Juneteenth from './pages/Projects/Juneteenth/Juneteenth'
 import BuffaloBoxing from './pages/Projects/BuffaloBoxing/BuffaloBoxing'
 import WhambamCoffee from './pages/Projects/WhambamCoffee/WhambamCoffee'
 import ModBikes from './pages/Projects/ModBikes/ModBikes'
-import { useEffect, useLayoutEffect } from 'react'
+import { useLayoutEffect } from 'react'
 
 function App() {
   const location = useLocation();
