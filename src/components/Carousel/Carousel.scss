@@ -1,0 +1,27 @@
+.spacebar-carousel-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.spacebar-carousel-container div {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.spacebar-carousel-scrollbar-none {
+    scrollbar-width: none;
+}
+
+.spacebar-carousel-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--spacebar-black);
+    cursor: pointer;
+}
+
+.spacebar-carousel-scrollbar::-webkit-scrollbar {
+    background: var(--spacebar-gray);
+    height: 3px;
+}

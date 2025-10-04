@@ -1,0 +1,77 @@
+@use "sass:map";
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+:root {
+  /* Colors */
+  --color-text: #111;
+  --color-muted: #666;
+
+  --spacebar-black: #242323;
+  --spacebar-white: #ffffff;
+  --spacebar-gray: lightgray;
+}
+
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+  xxxl: 1920px
+);
+
+.spacebar-black-background {
+  background-color: var(--spacebar-black);
+  color: var(--spacebar-white);
+}
+
+.spacebar-white-font {
+  color: var(--spacebar-white);
+}
+
+.spacebar-black-font {
+  color: var(--spacebar-black);
+}
+
+.space-gray-background {
+  background-color: var(--spacebar-gray);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--sb-base);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin media($breakpoint, $type: "min-width") {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map.get($breakpoints, $breakpoint);
+
+    @if $type =="min-width" {
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    }
+
+    @else if $type =="max-width" {
+      @media (max-width: $breakpoint-value) {
+        @content;
+      }
+    }
+
+    @else {
+      @warn "Invalid media query type: #{$type}. Use 'min-width' or 'max-width'.";
+    }
+  }
+
+  @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}

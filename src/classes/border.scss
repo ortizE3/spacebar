@@ -1,0 +1,18 @@
+/* -----------------------------
+   Border Utilities
+----------------------------- */
+$max-border: 5; // maximum border width
+
+@for $i from 0 through $max-border {
+    @if $i ==0 {
+        .border-0 {
+            border: none !important;
+        }
+    }
+
+    @else {
+        .border-#{$i} {
+            border: #{$i}px solid black !important;
+        }
+    }
+}

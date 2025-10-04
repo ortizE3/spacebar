@@ -1,0 +1,152 @@
+/* -----------------------------
+   Flex Utilities
+----------------------------- */
+
+/* Display */
+$flex-displays: (
+    flex: flex,
+    inline-flex: inline-flex
+);
+
+@each $name, $val in $flex-displays {
+    .#{$name} {
+        display: $val !important;
+    }
+}
+
+/* Flex Direction */
+$flex-directions: (
+    row: row,
+    row-reverse: row-reverse,
+    col: column,
+    col-reverse: column-reverse
+);
+
+@each $name, $val in $flex-directions {
+    .flex-#{$name} {
+        flex-direction: $val !important;
+    }
+}
+
+/* Flex Wrap */
+$flex-wraps: (
+    nowrap: nowrap,
+    wrap: wrap,
+    wrap-reverse: wrap-reverse
+);
+
+@each $name, $val in $flex-wraps {
+    .flex-#{$name} {
+        flex-wrap: $val !important;
+    }
+}
+
+/* Justify Content */
+$justify: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly
+);
+
+@each $name, $val in $justify {
+    .justify-#{$name} {
+        justify-content: $val !important;
+    }
+}
+
+/* Align Items */
+$align-items: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    stretch: stretch,
+    baseline: baseline
+);
+
+@each $name, $val in $align-items {
+    .items-#{$name} {
+        align-items: $val !important;
+    }
+}
+
+/* Align Self */
+$align-self: (
+    auto: auto,
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    stretch: stretch
+);
+
+@each $name, $val in $align-self {
+    .self-#{$name} {
+        align-self: $val !important;
+    }
+}
+
+/* Align Content */
+$align-content: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+    stretch: stretch
+);
+
+@each $name, $val in $align-content {
+    .content-#{$name} {
+        align-content: $val !important;
+    }
+}
+
+/* Flex Grow & Shrink */
+.flex-grow {
+    flex-grow: 1 !important;
+}
+
+.flex-grow-0 {
+    flex-grow: 0 !important;
+}
+
+.flex-shrink {
+    flex-shrink: 1 !important;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0 !important;
+}
+
+/* Flex Basis / Shorthand */
+.flex-auto {
+    flex: 1 1 auto !important;
+}
+
+.flex-initial {
+    flex: 0 1 auto !important;
+}
+
+.flex-none {
+    flex: none !important;
+}
+
+/* Gap Utilities */
+$gaps: (
+    0: 0,
+    xs: 0.25rem,
+    sm: 0.5rem,
+    md: 1rem,
+    lg: 1.5rem,
+    xl: 2rem,
+    xxl: 3rem,
+    xxxl: 6rem
+);
+
+@each $name, $val in $gaps {
+    .gap-#{$name} {
+        gap: $val !important;
+    }
+}

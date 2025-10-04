@@ -1,0 +1,27 @@
+@use "../../../index.scss" as *;
+@use "../../../classes/size.scss" as *;
+
+
+.spacebar-home-about-container {
+    display: flex;
+    flex-direction: column;
+
+    @include media('xxl', 'min-width') {
+        flex-direction: row;
+    }
+}
+
+.spacebar-home-about-img-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.spacebar-home-about-img {
+    height: auto;
+    width: 90%;
+
+    @include media('xxl', 'max-width') {
+        width: 40%;
+    }
+}

@@ -1,0 +1,11 @@
+@use "../../../classes/size.scss" as *;
+
+.about-message-text {
+    width: 60%;
+
+    $width-breakpoints: (
+        lg: 100%
+    );
+
+@include responsive-width($width-breakpoints, "max-width")
+}

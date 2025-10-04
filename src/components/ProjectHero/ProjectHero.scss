@@ -1,0 +1,5 @@
+@use '../Header/Header.scss' as *;
+
+.hero-image-container {
+    height: calc(100vh - $header-height);
+}

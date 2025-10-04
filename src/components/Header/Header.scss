@@ -1,0 +1,40 @@
+@use "../../index.scss" as *;
+
+$header-height: 70px;
+
+.spacebar-header-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: $header-height;
+    background-color: transparent;
+    color: inherit;
+    z-index: 1001;
+    transition: background-color .3s ease-in-out;
+}
+
+.spacebar-header-container-link {
+    cursor: pointer;
+}
+
+.spacebar-header-mobile-menu {
+    background-color: var(--spacebar-black);
+    color: inherit;
+    margin: 0;
+    transition: all 0.5s ease-out;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.spacebar-header-container-img {
+    height: 40px;
+}
+
+.spacebar-header-container-menu-bottom-img {
+    width: 120px;
+}

@@ -1,0 +1,14 @@
+@use "../../index.scss" as *;
+
+.spacebar-project-description-container {
+    display: flex;
+    flex-direction: row;
+
+    @include media('xl', 'max-width') {
+        flex-direction: column;
+    }
+}
+
+.spacebar-project-description-container div {
+    width: 100%;
+}

@@ -1,0 +1,30 @@
+.footer-img {
+    width: 100px;
+}
+
+.footer-input-container {
+    border-bottom: 1px solid var(--spacebar-white);
+}
+
+.footer-input-container:focus {
+    border-bottom: 2px solid var(--spacebar-gray);
+}
+
+.footer-input {
+    border: none;
+    transition: .1s all ease-in-out;
+    outline: none;
+    background: transparent;
+    padding-bottom: 18px;
+    color: inherit;
+    width: 100%;
+}
+
+.footer-arrow-icon {
+    height: 2em;
+}
+
+.footer-button {
+    background: transparent;
+    cursor: pointer;
+}

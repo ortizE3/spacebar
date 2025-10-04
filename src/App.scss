@@ -1,0 +1,43 @@
+@use "./index.scss" as *;
+@use "./components/Header/Header.scss" as *;
+
+.app-container {
+  padding: $header-height 6% 0px 6%;
+  box-sizing: border-box;
+
+  @include media('lg', 'max-width') {
+    padding: $header-height 6% 0px 6%,
+  }
+
+  @include media('md', 'max-width') {
+    padding: $header-height 5% 0px 6%,
+  }
+}
+
+.footer-container {
+  padding: 5% 15%;
+
+  @include media('xxxl', 'max-width') {
+    padding: 5% 15%,
+  }
+
+  @include media('lg', 'max-width') {
+    padding: 5% 10%,
+  }
+
+  @include media('md', 'max-width') {
+    padding: 5% 5%,
+  }
+}
+
+.header-container {
+  padding: 1% 2%;
+
+  @include media('md', 'max-width') {
+    padding: 2% 4%,
+  }
+
+  @include media('sm', 'max-width') {
+    padding: 3% 5%,
+  }
+}

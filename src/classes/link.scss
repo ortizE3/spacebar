@@ -1,0 +1,16 @@
+@use "../classes/text.scss" as *;
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-family: $font-body;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.link-underline {
+    text-decoration: underline;
+}
