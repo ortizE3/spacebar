@@ -9,3 +9,21 @@
 
 @include responsive-width($width-breakpoints, "max-width")
 }
+
+.home-project-select {
+    width: 60%;
+    $width-breakpoints: (
+        md: 100%
+    );
+
+@include responsive-width($width-breakpoints, "max-width")
+}
+
+.home-project-input {
+    width: 80%;
+    $width-breakpoints: (
+        md: 100%
+    );
+
+@include responsive-width($width-breakpoints, "max-width")
+}

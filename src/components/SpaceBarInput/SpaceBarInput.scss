@@ -3,6 +3,9 @@
     border: solid lightgray 1px;
     border-radius: 8px;
     width: 100%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .spacebar-input-error {

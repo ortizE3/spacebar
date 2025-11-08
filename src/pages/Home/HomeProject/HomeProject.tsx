@@ -61,20 +61,20 @@ function HomeProject() {
         <div className="flex flex-col gap-lg">
             <h1 className="sb-semibold uppercase">Custom <br /> Project?</h1>
 
-            <div className="w-80 flex flex-col gap-lg">
+            <div className="flex flex-col gap-lg home-project-input ">
                 <div>
-                    <SpaceBarInput placeholder="What do you need?" onChange={onTitleChange} error={titleError} errorMessage={errorMessage}></SpaceBarInput>
+                    <SpaceBarInput id='email-title' placeholder="What do you need?" onChange={onTitleChange} error={titleError} errorMessage={errorMessage}></SpaceBarInput>
                 </div>
 
                 <div>
-                    <SpaceBarTextArea placeholder="Tell us about your vision..." onChange={onSubjectChange} error={subjectError} errorMessage={errorMessage}></SpaceBarTextArea>
+                    <SpaceBarTextArea id='email-body' placeholder="Tell us about your vision..." onChange={onSubjectChange} error={subjectError} errorMessage={errorMessage}></SpaceBarTextArea>
                 </div>
 
             </div>
 
             <div className="flex flex-col">
                 <label className="m-0" htmlFor="spacebar-budget-range">Budget Range:</label>
-                <SpaceBarSelect id="spacebar-budget-range" className="w-60" onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                <SpaceBarSelect id="spacebar-budget-range" className="home-project-select" onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
                     setSelection(event.target.value)
                 }}>
                     <option value="Starter Brand Kit - $500">Starter Brand Kit - $500</option>
