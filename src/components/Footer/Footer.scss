@@ -1,3 +1,5 @@
+@use '../../index.scss' as *;
+
 .footer-img {
     width: 100px;
 }
@@ -27,4 +29,12 @@
 .footer-button {
     background: transparent;
     cursor: pointer;
+}
+
+.footer-link {
+    @include media('sm', 'max-width') {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
 }

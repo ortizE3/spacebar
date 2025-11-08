@@ -8,7 +8,7 @@ function Footer() {
             <h3 className='mt-xl w-50'>
                 <span>
                     We team up with ambitious brands and people who want to stand out. Let’s build something awesome together.&nbsp;
-                    <a className='word-wrap link-underline' href='mailto:spacebarcreative@gmail.com'>spacebarcreative@gmail.com</a>
+                    <a className='footer-link link-underline' href='mailto:spacebarcreative@gmail.com'>spacebarcreative@gmail.com</a>
                 </span>
             </h3>
 
