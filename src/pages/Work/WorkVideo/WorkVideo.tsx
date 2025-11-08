@@ -6,12 +6,12 @@ function WorkVideo() {
     return (
         <div>
             <NumLine start='02' end='/02' />
-            <h5 className='uppercase sb-semibold'>
+            <h1 className='uppercase sb-semibold'>
                 Video<br />
                 Production
-            </h5>
+            </h1>
 
-            <div className='w-80 mb-xl sb-semibold'>We turn concepts into cinematic stories. Every video here is built to grab attention and never let go.</div>
+            <h2 className='w-80 mb-xl sb-semibold'>We turn concepts into cinematic stories. Every video here is built to grab attention and never let go.</h2>
 
             <Carousel className='mb-xxxl'>
                 <CarouselVideo

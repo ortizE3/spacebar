@@ -12,9 +12,9 @@ function CarouselVideo(props: CarouselVideoProps) {
                 <div>
                     <CloudflareVideo {...props.cloudflareVideoProps} inView={isInView} autoPlay={false} />
                 </div>
-                <h6 className='sb-semibold'>{props.title}</h6>
+                <h1 className='spacebar-carousel-title sb-semibold'>{props.title}</h1>
             </a>
-            <p className='p-small'>{props.description}</p>
+            <h4 className='spacebar-muted-font  spacebar-carousel-sub'>{props.description}</h4>
 
         </div>
     )

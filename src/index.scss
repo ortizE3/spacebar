@@ -12,6 +12,8 @@ video::-webkit-media-controls {
   --spacebar-black: #242323;
   --spacebar-white: #ffffff;
   --spacebar-gray: lightgray;
+
+  --spacebar-red: #FF2C2C;
 }
 
 $breakpoints: (
@@ -36,8 +38,33 @@ $breakpoints: (
   color: var(--spacebar-black);
 }
 
+.spacebar-muted-font {
+  color: var(--color-muted);
+}
+
+.spacebar-error {
+  color: var(--spacebar-red) !important;
+}
+
 .space-gray-background {
   background-color: var(--spacebar-gray);
+}
+
+.transparent-background {
+  background-color: transparent;
+}
+
+.hero-abs-background {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.visibility-hide {
+  visibility: hidden;
 }
 
 body {

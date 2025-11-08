@@ -7,7 +7,6 @@ function About() {
             <AboutMessage />
             <div className='app-container'>
                 <AboutPeople />
-
             </div>
         </>
     )

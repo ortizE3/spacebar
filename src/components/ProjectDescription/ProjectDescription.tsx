@@ -11,12 +11,12 @@ function ProjectDescription(props: ProjectDescriptionProps) {
 
             <div className="flex flex-col mt-xxl">
                 <div>
-                    <div className="sb-semibold">Project Overview</div>
+                    <h2 className="sb-semibold">Project Overview</h2>
                     {props.projectDescription}
                 </div>
 
                 <div>
-                    <h6 className="sb-semibold uppercase">Deliverables</h6>
+                    <h2 className="sb-semibold uppercase">Deliverables</h2>
                     <ul>
                         {
                             props && props.deliverablesList.length > 0 && props.deliverablesList.map((deliverables) => {

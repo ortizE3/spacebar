@@ -4,7 +4,7 @@ import './SpaceBarButton.scss'
 
 function SpaceBarButton(props: SpaceBarButtonProps) {
     return (
-        <button className={`spacebar-button ${props.className ?? ''} sb-semibold`} onClick={props.onClick}>{props.children}</button>
+        <button className={`spacebar-button ${props.className ?? ''}`} onClick={props.onClick}>{props.children}</button>
     )
 }
 

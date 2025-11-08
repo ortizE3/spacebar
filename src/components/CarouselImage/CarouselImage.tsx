@@ -10,13 +10,13 @@ function CarouselImage(props: CarouselImageProps) {
                 <div>
                     <img src={props.imageSrc}></img>
                 </div>
-                {props.title && <h6 className='sb-semibold'>{props.title}</h6>}
+                {props.title && <h1 className='sb-semibold'>{props.title}</h1>}
             </>
         )
     }
 
     return (
-        <div className='spacebar-carousel-image-container uppercase mb-xxl'>
+        <div className='spacebar-carousel-image-container uppercase mb-lg'>
             {props.href && <a className='w-100' href={props.href}>
                 {getImage()}
             </a>}
@@ -25,7 +25,7 @@ function CarouselImage(props: CarouselImageProps) {
                     {getImage()}
                 </>
             }
-            {props.description && <p className='p-small'>{props.description}</p>}
+            {props.description && <h4 className='spacebar-muted-font'>{props.description}</h4>}
         </div>
     )
 }

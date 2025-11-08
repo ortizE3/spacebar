@@ -4,7 +4,7 @@ import PricingPackage from "../../../components/PricingPackage/PricingPackage"
 function HomePricing() {
     return (
         <div>
-            <h4 className="sb-semibold uppercase">Popular <br /> Packages</h4>
+            <h1 className="sb-semibold uppercase">Popular <br /> Packages</h1>
 
             <Carousel className="mb-xxxl">
                 <PricingPackage price="500" title="Starter Brand Kit" features={[

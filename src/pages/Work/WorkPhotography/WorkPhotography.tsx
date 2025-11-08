@@ -5,13 +5,13 @@ import NumLine from '../../../components/NumLine/NumLine'
 function WorkPhotography() {
     return (
         <div className='mt-xxxl'>
-            <h5 className='uppercase sb-semibold'>
-                lifestyle+Product<br />
+            <h1 className='uppercase sb-semibold'>
+                lifestyle + Product<br />
                 photography
-            </h5>
+            </h1>
             <NumLine start='01' end='/02' />
 
-            <div className='w-80 mb-xl sb-semibold'>We don’t just shoot products—we place them in context, with stories, environments, and textures that make them matter. Every photo is a chance to say something bigger about the brand, the moment, and the culture it lives in.</div>
+            <h2 className='w-80 mb-xl sb-semibold'>We don’t just shoot products—we place them in context, with stories, environments, and textures that make them matter. Every photo is a chance to say something bigger about the brand, the moment, and the culture it lives in.</h2>
 
             <Carousel className='mb-xxxl'>
                 <CarouselImage
@@ -36,7 +36,7 @@ function WorkPhotography() {
                     title='LRG – Find Your Higher Self Campaign'
                     href='/projects/lrg-find-your-self'
                     description='Street editorial shoot for hoodie and tee campaign.'
-                    imageSrc='https://static.wixstatic.com/media/f86d1e_5f7bad2c10c34ce3b1b408d0c48302af~mv2.jpg/v1/fill/w_451,h_258,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f86d1e_5f7bad2c10c34ce3b1b408d0c48302af~mv2.jpg'
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/b2b0e60c-ee9a-49ae-97d4-40e7a2191600/public'
                 />
                 <CarouselImage
                     title='DGK – Made 2 Survive Campaign'

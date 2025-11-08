@@ -22,6 +22,22 @@
     width: 90%;
 
     @include media('xxl', 'max-width') {
-        width: 40%;
+        width: 60%;
+    }
+
+    @include media('md', 'max-width') {
+        width: 80%;
+    }
+}
+
+.spacebar-home-about-text {
+    font-size: 37px;
+
+    @include media('xxl', 'max-width') {
+        width: 60%;
+    }
+
+    @include media('md', 'max-width') {
+        width: 100%;
     }
 }
