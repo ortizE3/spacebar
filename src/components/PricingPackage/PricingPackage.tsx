@@ -7,10 +7,10 @@ function PricingPackage(props: PricingPackageProps) {
     const navigate = useNavigate();
 
     return (
-        <div className='mr-xxxl mb-xxl'>
+        <div className='mr-xxxl mb-xxl w-100'>
             <h1 className="sb-semibold">${props.price}</h1>
             <hr className='w-10 m-0 border-1' />
-            <h1 className="word-wrap sb-semibold mt-xl uppercase">{props.title}</h1>
+            <h1 className="sb-semibold mt-xl uppercase">{props.title}</h1>
             <ul className='ul-no-indent'>
                 {props && props.features.map((feature, index) => (
                     <li key={feature + index}>
