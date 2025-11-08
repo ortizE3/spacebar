@@ -32,6 +32,8 @@
 }
 
 .footer-link {
+    overflow-wrap: anywhere;
+
     @include media('sm', 'max-width') {
         display: block;
         margin-left: 0;
