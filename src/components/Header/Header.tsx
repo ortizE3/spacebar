@@ -61,11 +61,11 @@ function Header() {
                         }
                         {!isMobile &&
                             <div className='w-100 flex justify-center'>
-                                <p className='flex gap-xxxl uppercase m-0'>
+                                <h2 className='flex gap-xxxl uppercase m-0'>
                                     <Link to='/'>Home</Link>
                                     <Link to='/about'>About</Link>
                                     <Link to='/work'>Work</Link>
-                                </p>
+                                </h2>
                             </div>
                         }
                     </div>

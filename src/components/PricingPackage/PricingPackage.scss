@@ -1,0 +1,14 @@
+@use '../../index.scss' as *;
+
+.pricing-container {
+    margin-right: 6em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media('md', 'max-width') {
+        width: 65%;
+        margin-right: 2em;
+    }
+}

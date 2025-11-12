@@ -1,26 +1,30 @@
 @use "../../classes/size.scss" as *;
+@use "../../index.scss" as *;
 
 .spacebar-carousel-image-container {
     white-space: wrap;
     width: 400px;
 
-    $width-breakpoints: (
-        sm: 100%
-    );
-
-@include responsive-width($width-breakpoints, "max-width")
+    @include media('md', 'max-width') {
+        width: 70%;
+    }
 }
 
 .spacebar-carousel-image-container div {
     height: 425px;
     width: inherit;
     overflow: hidden;
+
+    @include media('md', 'max-width') {
+        height: 325px;
+        width: 100%;
+    }
 }
 
 .spacebar-carousel-image-container img {
     object-fit: cover;
     height: inherit;
-    width: inherit;
+    width: 100%;
     transition: all .3s ease;
 }
 
