@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Hls from "hls.js";
 import * as dashjs from "dashjs";
 import type { CloudflareVideoProps } from "../../models/Props/CloudflareVideoProps";
-
-import './CloudflareVideo.scss'
+import "./CloudflareVideo.scss";
+import { usePageVisibility } from "../../hooks/hooks";
 
 const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
     dashSrc,
@@ -14,26 +14,50 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
     className = "",
 }) => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
+    const hlsRef = useRef<Hls | null>(null);
+    const dashRef = useRef<dashjs.MediaPlayerClass | null>(null);
+    const isVisible = usePageVisibility();
 
-    useEffect(() => {
+    const initializePlayer = () => {
         const video = videoRef.current;
         if (!video) return;
+
+        if (hlsRef.current) {
+            hlsRef.current.destroy();
+            hlsRef.current = null;
+        }
+        if (dashRef.current) {
+            dashRef.current.reset();
+            dashRef.current = null;
+        }
 
         if (dashjs.supportsMediaSource()) {
             const dashPlayer = dashjs.MediaPlayer().create();
             dashPlayer.initialize(video, dashSrc, true);
-            return () => dashPlayer.reset();
-        }
-        if (Hls.isSupported()) {
+            dashRef.current = dashPlayer;
+        } else if (Hls.isSupported()) {
             const hls = new Hls();
             hls.loadSource(hlsSrc);
             hls.attachMedia(video);
-            return () => hls.destroy();
-        }
-        if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            hlsRef.current = hls;
+        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
             video.src = hlsSrc;
         }
+    };
+
+    useEffect(() => {
+        initializePlayer();
+        return () => {
+            if (hlsRef.current) hlsRef.current.destroy();
+            if (dashRef.current) dashRef.current.reset();
+        };
     }, [dashSrc, hlsSrc]);
+
+    useEffect(() => {
+        if (isVisible) {
+            initializePlayer();
+        }
+    }, [isVisible]);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -41,28 +65,27 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
 
         video.muted = true;
         video.playsInline = true;
-        video.loop = true;
-        video.autoplay = true;
+        video.loop = loop;
+        video.autoplay = autoPlay;
 
         const playPromise = video.play();
         if (playPromise !== undefined) {
             playPromise.catch(() => {
-                // fallback: autoplay blocked, maybe show a play button
                 console.log("Autoplay blocked on mobile.");
             });
         }
-    }, []);
+    }, [autoPlay, loop]);
 
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
 
-        if (video && !inView) {
+        if (!inView || !isVisible) {
             video.pause();
         } else {
-            video.play();
+            video.play().catch(() => { });
         }
-    }, [inView])
+    }, [inView, isVisible]);
 
     return (
         <div className="cloudflare-video-container">
@@ -73,11 +96,10 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
                 muted
                 loop={loop}
                 playsInline
-                className={`${className}`}
+                className={className}
                 controls={false}
             />
         </div>
-
     );
 };
 

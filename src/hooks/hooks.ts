@@ -57,3 +57,20 @@ export function useInView<T extends HTMLElement>(
     return { ref, isInView };
 }
 
+export function usePageVisibility() {
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            setIsVisible(document.visibilityState === 'visible');
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, []);
+
+    return isVisible;
+}
