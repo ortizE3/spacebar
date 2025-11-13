@@ -48,7 +48,7 @@ function Header() {
                             navigate('/')
                         }}></img>
                         {!showMenu && isMobile &&
-                            <h2>
+                            <h2 className='m-0'>
                                 <a className='spacebar-header-mobile-menu-text secondary-font-bold spacebar-header-container-link uppercase' onClick={() => {
                                     setShowMenu(!showMenu)
                                 }}>menu</a>
