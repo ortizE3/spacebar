@@ -10,6 +10,7 @@ import './classes/border.scss';
 import './classes/flex.scss';
 import './classes/size.scss';
 import './classes/link.scss';
+import './classes/select.scss';
 import { BrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')!).render(
