@@ -172,9 +172,6 @@ small,
     font-family: "Eurostile Extended" !important;
 }
 
-/* ----------------------------------
-   Grow Animation
----------------------------------- */
 @keyframes grow {
     0% {
         transform: translateY(200%)
@@ -203,6 +200,8 @@ $animation-delay: (
     3: .3s,
     4: .4s,
     5: .5s,
+    10: 1s,
+    13: 1.3s,
 );
 
 @each $key, $val in $animation-delay {

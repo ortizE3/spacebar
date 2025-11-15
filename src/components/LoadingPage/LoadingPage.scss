@@ -1,0 +1,58 @@
+.loading-page-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-page-img-container {
+    height: 10%;
+    width: auto;
+}
+
+.loading-page-img-container img {
+    height: 100%;
+    width: auto;
+}
+
+@keyframes doneLoading {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-100%)
+    }
+}
+
+.done-loading {
+    transform: translateY(0);
+    animation-name: doneLoading;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+    0% {
+        transform: translateY(0%)
+    }
+
+    to {
+        transform: translateY(-100%)
+    }
+}
+
+.shrink-text {
+    transform: translateY(0%);
+    animation-name: shrink;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}

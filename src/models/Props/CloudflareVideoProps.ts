@@ -5,4 +5,5 @@ export class CloudflareVideoProps {
     inView?: boolean;
     loop?: boolean;
     className?: string;
+    checkPageLoading?: boolean;
 }

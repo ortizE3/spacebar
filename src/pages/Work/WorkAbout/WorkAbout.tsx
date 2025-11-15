@@ -8,11 +8,11 @@ function WorkAbout() {
                 <div>
 
                     <span className='grow-container'>
-                        <h2 className='uppercase sb-bold secondary-font-bold grow-text m-0 work-about-header-font'>We Make Brands Look Like Culture,</h2>
+                        <h2 className='uppercase sb-bold secondary-font-bold grow-text animation-delay-10 m-0 work-about-header-font'>We Make Brands Look Like Culture,</h2>
                     </span>
 
                     <span className='grow-container'>
-                        <h2 className='uppercase sb-bold secondary-font-bold grow-text animation-delay-3 m-0 work-about-header-font'>Not Just Business.</h2>
+                        <h2 className='uppercase sb-bold secondary-font-bold grow-text animation-delay-13 m-0 work-about-header-font'>Not Just Business.</h2>
                     </span>
                 </div>
 
@@ -23,6 +23,7 @@ function WorkAbout() {
 
             <div className='hero-abs-background'>
                 <CloudflareVideo
+                    checkPageLoading
                     dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/ab21920fa2d6d753b74827ba5e60f16c/manifest/video.mpd"
                     hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/ab21920fa2d6d753b74827ba5e60f16c/manifest/video.m3u8"
                 />
