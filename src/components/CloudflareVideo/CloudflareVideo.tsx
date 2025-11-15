@@ -20,27 +20,20 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
     const dashRef = useRef<dashjs.MediaPlayerClass | null>(null);
     const isVisible = usePageVisibility();
 
-    const { setLoadingPage } = useContext(LoadingPage);
+    const { setLoadingPage } = useContext(LoadingPage)
 
-    /** Mark loaded only ONCE */
-    const markLoaded = (() => {
-        let called = false;
-        return () => {
-            if (called) return;
-            called = true;
+    const markLoaded = () => {
+        if (checkPageLoading)
+            setLoadingPage(false);
+    };
 
-            if (checkPageLoading) setLoadingPage(false);
-        };
-    })();
+    const initializePlayer = () => {
+        if (checkPageLoading)
+            setLoadingPage(true);
 
-    /** Init only when src changes */
-    useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
 
-        if (checkPageLoading) setLoadingPage(true);
-
-        // cleanup old players
         if (hlsRef.current) {
             hlsRef.current.destroy();
             hlsRef.current = null;
@@ -58,6 +51,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
             dashPlayer.initialize(video, dashSrc, true);
 
             dashPlayer.on(dashjs.MediaPlayer.events.STREAM_INITIALIZED, markLoaded);
+            dashPlayer.on(dashjs.MediaPlayer.events.MANIFEST_LOADED, markLoaded);
 
             dashRef.current = dashPlayer;
             return;
@@ -69,6 +63,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
             hls.attachMedia(video);
 
             hls.on(Hls.Events.MANIFEST_PARSED, markLoaded);
+            hls.on(Hls.Events.LEVEL_LOADED, markLoaded);
 
             hlsRef.current = hls;
             return;
@@ -77,23 +72,20 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
         if (video.canPlayType("application/vnd.apple.mpegurl")) {
             video.src = hlsSrc;
         }
+    };
 
+    useEffect(() => {
+        initializePlayer();
         return () => {
             if (hlsRef.current) hlsRef.current.destroy();
             if (dashRef.current) dashRef.current.reset();
         };
     }, [dashSrc, hlsSrc]);
 
-    /** Only play/pause — NEVER reinitialize */
     useEffect(() => {
-        const video = videoRef.current;
-        if (!video) return;
+        if (isVisible) initializePlayer();
+    }, [isVisible]);
 
-        if (!inView || !isVisible) video.pause();
-        else video.play().catch(() => { });
-    }, [inView, isVisible]);
-
-    /** Autoplay setup */
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
@@ -102,21 +94,35 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
         video.playsInline = true;
         video.loop = loop;
         video.autoplay = autoPlay;
+
+        const promise = video.play();
+        if (promise) promise.catch(() => { });
     }, [autoPlay, loop]);
 
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        if (!inView || !isVisible) video.pause();
+        else video.play().catch(() => { });
+    }, [inView, isVisible]);
+
     return (
-        <div className="cloudflare-video-container">
-            <video
-                preload="auto"
-                ref={videoRef}
-                autoPlay={autoPlay}
-                muted
-                loop={loop}
-                playsInline
-                className={className}
-                controls={false}
-            />
-        </div>
+        <>
+            <div className="cloudflare-video-container">
+                <video
+                    preload="auto"
+                    ref={videoRef}
+                    autoPlay={autoPlay}
+                    muted
+                    loop={loop}
+                    playsInline
+                    className={className}
+                    controls={false}
+                />
+            </div>
+        </>
+
     );
 };
 
