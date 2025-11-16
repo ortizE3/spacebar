@@ -1,8 +1,8 @@
-import { useContext, useEffect } from 'react'
-import spacebar from '../../assets/images/spacebar/spacebar.png'
+import { useContext, useEffect } from 'react';
+import spacebar from '../../assets/images/spacebar/spacebar.png';
+import LoadingPage from '../../context/loading';
 
 import './LoadingPage.scss'
-import LoadingPage from '../../context/loading'
 
 function PageLoadingDrawer() {
     const { loadingPage } = useContext(LoadingPage);

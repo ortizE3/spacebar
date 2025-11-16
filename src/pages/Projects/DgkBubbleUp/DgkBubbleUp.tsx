@@ -10,8 +10,6 @@ function DgkBubbleUp() {
             <ProjectHero
                 dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/730d9e590ea661c092a4dde21bd2348c/manifest/video.mpd"
                 hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/730d9e590ea661c092a4dde21bd2348c/manifest/video.m3u8"
-                title="DGK – Bubble Up Campaign"
-                start="DGK – Bubble Up Campaign"
             />
             <div className="app-container">
 
@@ -42,7 +40,6 @@ function DgkBubbleUp() {
                 </Carousel>
                 <HeroImage src='https://grav.com/cdn/shop/files/dgkbubble_header.jpg?v=1721195341&width=2000' />
             </div>
-
         </div>
     )
 }

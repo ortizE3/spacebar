@@ -6,8 +6,7 @@ function GravCannabisSpirit() {
         <>
             <ProjectHero
                 dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.m3u8" title="GRAV – Cannabis Spirit Photography & Cinemagraphs"
-                start="GRAV – Cannabis Spirit"
+                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.m3u8"
             />
             <div className='app-container'>
                 <ProjectDescription

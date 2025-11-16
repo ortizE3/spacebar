@@ -1,3 +1,5 @@
+@use '../../index.scss' as *;
+
 .spacebar-input {
     padding: .7em;
     border: solid lightgray 1px;
@@ -7,6 +9,10 @@
     -webkit-appearance: none;
     appearance: none;
     font-size: larger;
+
+    @include media('md', 'max-width') {
+        font-size: medium;
+    }
 }
 
 .spacebar-input-error {

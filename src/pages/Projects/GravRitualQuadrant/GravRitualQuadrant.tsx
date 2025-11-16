@@ -7,8 +7,6 @@ function GravRitualQuadrant() {
             <ProjectHero
                 dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.mpd"
                 hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.m3u8"
-                title="GRAV – Find Your Ritual / Quadrant"
-                start="GRAV – Find Your Ritual / Quadrant"
             />
             <div className='app-container'>
                 <ProjectDescription

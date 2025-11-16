@@ -7,8 +7,6 @@ function BuffaloBoxing() {
             <ProjectHero
                 dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.mpd"
                 hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.m3u8"
-                title="Buffalo Boxing Gym"
-                start="Bonds Born of Sweat "
             />
             <div className='app-container'>
 

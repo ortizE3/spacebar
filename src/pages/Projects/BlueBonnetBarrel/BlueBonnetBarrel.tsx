@@ -7,8 +7,6 @@ function BlueBonnetBarrel() {
             <ProjectHero
                 dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0a0472dcbf378a831bab6b2fe80952a1/manifest/video.mpd"
                 hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0a0472dcbf378a831bab6b2fe80952a1/manifest/video.m3u8"
-                title="Blue Bonnet Barrel Co."
-                start="Blue Bonnet Barrel"
             />
             <div className='app-container'>
                 <ProjectDescription

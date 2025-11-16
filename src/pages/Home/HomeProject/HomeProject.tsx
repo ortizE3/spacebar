@@ -32,8 +32,8 @@ function HomeProject() {
             return;
         }
 
-        let emailSubject = `Spacebar Inquiry: ${title}`;
-        let emailBody = `${subject}%0A%0A${selection}`;
+        const emailSubject = `Spacebar Inquiry: ${title}`;
+        const emailBody = `${subject}%0A%0A${selection}`;
 
         window.open(`mailto:spacebarcreative@gmail.com?subject=${emailSubject}&body=${emailBody}`)
     }

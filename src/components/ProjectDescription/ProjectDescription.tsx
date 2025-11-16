@@ -12,7 +12,7 @@ function ProjectDescription(props: ProjectDescriptionProps) {
             <div className="flex flex-col mt-xxl">
                 <div>
                     <h2 className="sb-semibold">Project Overview</h2>
-                    {props.projectDescription}
+                    <h3>{props.projectDescription}</h3>
                 </div>
 
                 <div>
@@ -22,8 +22,8 @@ function ProjectDescription(props: ProjectDescriptionProps) {
                             props && props.deliverablesList.length > 0 && props.deliverablesList.map((deliverables) => {
                                 return (
                                     <li className="mb-xxl" key={deliverables.title}>
-                                        <div className="sb-semibold">{deliverables.title}</div>
-                                        {deliverables.description}
+                                        <h3 className="sb-semibold">{deliverables.title}</h3>
+                                        <h3>{deliverables.description}</h3>
                                     </li>
                                 );
                             })

@@ -7,8 +7,6 @@ function WhambamCoffee() {
             <ProjectHero
                 dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/d9949fea415ebaba7dc224c6cedca798/manifest/video.mpd"
                 hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/d9949fea415ebaba7dc224c6cedca798/manifest/video.m3u8"
-                title="WhamBam Coffee Truck"
-                start="WhamBam Coffee Truck – Brand Video "
             />
             <div className='app-container'>
 

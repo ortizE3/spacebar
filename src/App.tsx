@@ -29,7 +29,7 @@ function App() {
   const [shouldLoad, setShouldLoad] = useState(false)
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0);
-    var shouldLoad = location.pathname === '/' || location.pathname.includes('work') || location.pathname.includes('project');
+    const shouldLoad = location.pathname === '/' || location.pathname.includes('work') || location.pathname.includes('project');
     setShouldLoad(shouldLoad)
   }, [location.pathname]);
   return (

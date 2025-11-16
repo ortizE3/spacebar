@@ -26,11 +26,11 @@ export function useWindowSize() {
 
 export function useInView<T extends HTMLElement>(
     options?: IntersectionObserverInit,
-    debounceMs: number = 100 // debounce delay in ms
+    debounceMs: number = 100
 ) {
     const ref = useRef<T | null>(null);
     const [isInView, setIsInView] = useState(false);
-    const timeoutRef = useRef<number | null>(null);
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         if (!ref.current) return;

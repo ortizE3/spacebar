@@ -2,6 +2,8 @@ import CarouselImage from '../../../components/CarouselImage/CarouselImage'
 import Carousel from '../../../components/Carousel/Carousel'
 import NumLine from '../../../components/NumLine/NumLine'
 
+import './WorkPhotography.scss'
+
 function WorkPhotography() {
     return (
         <div className='mt-xxxl'>
@@ -11,7 +13,7 @@ function WorkPhotography() {
             </h1>
             <NumLine start='01' end='/02' />
 
-            <h2 className='w-80 mb-xl sb-semibold'>We don’t just shoot products—we place them in context, with stories, environments, and textures that make them matter. Every photo is a chance to say something bigger about the brand, the moment, and the culture it lives in.</h2>
+            <h3 className='work-photography-text mb-xl'>We don’t just shoot products—we place them in context, with stories, environments, and textures that make them matter. Every photo is a chance to say something bigger about the brand, the moment, and the culture it lives in.</h3>
 
             <Carousel className='mb-xxxl'>
                 <CarouselImage

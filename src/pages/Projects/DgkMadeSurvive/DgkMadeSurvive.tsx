@@ -10,8 +10,6 @@ function DgkMadeSurvive() {
             <ProjectHero
                 dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/cbcb06d0736b8faf8d0bb99cba2125b5/manifest/video.mpd"
                 hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/cbcb06d0736b8faf8d0bb99cba2125b5/manifest/video.m3u8"
-                title="DGK – Made 2 Survive Campaign"
-                start="Made 2 Survive Campaign"
             />
             <div className='app-container'>
 

@@ -1,0 +1,7 @@
+@use '../../../index.scss' as *;
+
+.work-photography-text {
+    @include media('md', 'min-width') {
+        width: 50%;
+    }
+}

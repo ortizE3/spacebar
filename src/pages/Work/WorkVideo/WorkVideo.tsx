@@ -1,7 +1,8 @@
-import CarouselVideo from '../../../components/CarouselVideo/CarouselVideo'
 import Carousel from '../../../components/Carousel/Carousel'
 import NumLine from '../../../components/NumLine/NumLine'
 import CarouselImage from '../../../components/CarouselImage/CarouselImage'
+
+import './WorkVideo.scss'
 
 function WorkVideo() {
     return (
@@ -12,7 +13,7 @@ function WorkVideo() {
             </h1>
             <NumLine start='02' end='/02' />
 
-            <h2 className='w-80 mb-xl sb-semibold'>We turn concepts into cinematic stories. Every video here is built to grab attention and never let go.</h2>
+            <h3 className='work-video-text mb-xl'>We turn concepts into cinematic stories. Every video here is built to grab attention and never let go.</h3>
 
             <Carousel className='mb-xxxl'>
                 <CarouselImage
@@ -41,14 +42,11 @@ function WorkVideo() {
                     description='Playful, punchy drink recipe videos with a bold branded twist.'
                     imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/1cddfb13-695e-4b1d-9c65-88002b361000/public'
                 />
-                <CarouselVideo
+                <CarouselImage
                     title='GRAV – Find Your Ritual / Quadrant Video'
                     href="/projects/grav-ritual-quadrant"
                     description='A 4-scene lifestyle narrative showing cannabis across different lives.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.m3u8"
-                    }} />
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/1cddfb13-695e-4b1d-9c65-88002b361000/public' />
                 <CarouselImage
                     title='GRAV x Pleasures – Breathe Again'
                     href="/projects/grav-breathe-again"
@@ -66,14 +64,11 @@ function WorkVideo() {
                     href="/projects/buffalo-boxing"
                     description='Hard-hitting gym promo—POV shots, drone work, and real moments.'
                     imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/44bcc06f-2987-43f0-007c-5d9525dccd00/public' />
-                <CarouselVideo
+                <CarouselImage
                     title='WhamBam Coffee Truck – Brand Video'
                     href="/projects/whambam-coffee"
                     description='Fast-paced visuals capturing hustle, grind, and brand personality.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.m3u8"
-                    }} />
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/1cddfb13-695e-4b1d-9c65-88002b361000/public' />
 
             </Carousel>
         </div>
