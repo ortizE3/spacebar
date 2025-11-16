@@ -18,7 +18,7 @@ function WorkPhotography() {
                     title='MOD Bikes'
                     href="/projects/mod-bikes"
                     description='Studio product shots showcasing bike models and key features.'
-                    imageSrc='https://static.wixstatic.com/media/f86d1e_5f7bad2c10c34ce3b1b408d0c48302af~mv2.jpg/v1/fill/w_451,h_258,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f86d1e_5f7bad2c10c34ce3b1b408d0c48302af~mv2.jpg'
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/4ebef73e-1626-44d7-6d7e-f23a671de900/public'
                 />
                 <CarouselImage
                     title='GRAV – Cannabis Spirit Photography & Cinemagraphs'

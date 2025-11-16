@@ -30,11 +30,11 @@ $breakpoints: (
 }
 
 .spacebar-white-font {
-  color: var(--spacebar-white);
+  color: var(--spacebar-white) !important;
 }
 
 .spacebar-black-font {
-  color: var(--spacebar-black);
+  color: var(--spacebar-black) !important;
 }
 
 .spacebar-muted-font {

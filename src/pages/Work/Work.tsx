@@ -1,6 +1,6 @@
 import WorkAbout from "./WorkAbout/WorkAbout"
 import WorkPhotography from "./WorkPhotography/WorkPhotography"
-//import WorkVideo from "./WorkVideo/WorkVideo"
+import WorkVideo from "./WorkVideo/WorkVideo"
 
 function Work() {
     return (
@@ -8,7 +8,7 @@ function Work() {
             <WorkAbout />
             <div className="app-container">
                 <WorkPhotography />
-                {/* <WorkVideo /> */}
+                <WorkVideo />
             </div>
         </>
     )

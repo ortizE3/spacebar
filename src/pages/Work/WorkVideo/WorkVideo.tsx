@@ -1,59 +1,45 @@
 import CarouselVideo from '../../../components/CarouselVideo/CarouselVideo'
 import Carousel from '../../../components/Carousel/Carousel'
 import NumLine from '../../../components/NumLine/NumLine'
+import CarouselImage from '../../../components/CarouselImage/CarouselImage'
 
 function WorkVideo() {
     return (
         <div>
-            <NumLine start='02' end='/02' />
             <h1 className='uppercase sb-semibold'>
                 Video<br />
                 Production
             </h1>
+            <NumLine start='02' end='/02' />
 
             <h2 className='w-80 mb-xl sb-semibold'>We turn concepts into cinematic stories. Every video here is built to grab attention and never let go.</h2>
 
             <Carousel className='mb-xxxl'>
-                <CarouselVideo
+                <CarouselImage
                     title='DGK – Bubble Up'
                     href='/projects/dgk-bubble-up'
-                    description='Corner store lifestyle vibes and skate energy, shot with Will Mazari.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/730d9e590ea661c092a4dde21bd2348c/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/730d9e590ea661c092a4dde21bd2348c/manifest/video.m3u8"
-                    }} />
-                <CarouselVideo
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/bb98044b-3042-4e63-43b9-baea20df8100/public'
+                    description='Corner store lifestyle vibes and skate energy, shot with Will Mazari.' />
+                <CarouselImage
                     title='LRG – Find Your Higher Self'
                     href='/projects/lrg-find-your-self'
                     description='Urban editorial-style promo with fast cuts and moody street scenes.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/65a3b14f907ea633f0e83fa9f8684df8/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/65a3b14f907ea633f0e83fa9f8684df8/manifest/video.m3u8"
-                    }} />
-                <CarouselVideo
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/4f5aebf3-b178-4d46-0ea4-c00b95ea2000/public' />
+                <CarouselImage
                     title='DGK – Made 2 Survive'
                     href='/projects/dgk-made-2-survive'
                     description='Shot in NYC. Rugged pace, bold tone, high-function product feature.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/cbcb06d0736b8faf8d0bb99cba2125b5/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/cbcb06d0736b8faf8d0bb99cba2125b5/manifest/video.m3u8"
-                    }} />
-                <CarouselVideo
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/becae240-2995-408b-0ef4-19e7f9b45f00/public' />
+                <CarouselImage
                     title='Blue Bonnet Barrel Co.'
                     href='/projects/blue-bonnet-barrel'
                     description='Cinematic short capturing handcrafted whiskey in rural Texas.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0a0472dcbf378a831bab6b2fe80952a1/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0a0472dcbf378a831bab6b2fe80952a1/manifest/video.m3u8"
-                    }} />
-                <CarouselVideo
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/4d8025ac-11f3-4974-5e10-6dc07fe3af00/public' />
+                <CarouselImage
                     title='GRAV – Cannabis Spirit Cocktail Series'
                     href='/projects/grav-cannabis-spirit'
                     description='Playful, punchy drink recipe videos with a bold branded twist.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.m3u8"
-                    }}
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/1cddfb13-695e-4b1d-9c65-88002b361000/public'
                 />
                 <CarouselVideo
                     title='GRAV – Find Your Ritual / Quadrant Video'
@@ -63,30 +49,23 @@ function WorkVideo() {
                         dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.mpd",
                         hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.m3u8"
                     }} />
-                <CarouselVideo
+                <CarouselImage
                     title='GRAV x Pleasures – Breathe Again'
                     href="/projects/grav-breathe-again"
                     description='Minimal, ambient, and mood-heavy visuals for a style-driven collab.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/f6ad8941e7d0063e6853d489d9148f4c/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/f6ad8941e7d0063e6853d489d9148f4c/manifest/video.m3u8"
-                    }} />
-                <CarouselVideo
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/08ee0d33-bf40-48ee-ed72-29c9a1a43900/public'
+                />
+                <CarouselImage
                     title='Capital View Arts – Juneteenth Celebration'
                     href="/projects/juneteenth"
                     description='Event recap honoring Austin’s Black creatives, culture, and community.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/d9949fea415ebaba7dc224c6cedca798/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/d9949fea415ebaba7dc224c6cedca798/manifest/video.m3u8"
-                    }} />
-                <CarouselVideo
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/87367d31-f16b-43f0-22de-3a555062d300/public'
+                />
+                <CarouselImage
                     title='Buffalo Boxing Gym – Bonds Born of Sweat'
                     href="/projects/buffalo-boxing"
                     description='Hard-hitting gym promo—POV shots, drone work, and real moments.'
-                    cloudflareVideoProps={{
-                        dashSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.mpd",
-                        hlsSrc: "https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.m3u8"
-                    }} />
+                    imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/44bcc06f-2987-43f0-007c-5d9525dccd00/public' />
                 <CarouselVideo
                     title='WhamBam Coffee Truck – Brand Video'
                     href="/projects/whambam-coffee"

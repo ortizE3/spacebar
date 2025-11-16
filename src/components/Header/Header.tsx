@@ -19,7 +19,7 @@ function Header() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        setIsBlackFont(location.pathname.includes('projects') || location.pathname == '/')
+        setIsBlackFont(location.pathname.includes('projects') || location.pathname.includes('work'))
     }, [location])
 
     useEffect(() => {

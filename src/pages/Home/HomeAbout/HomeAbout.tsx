@@ -25,7 +25,7 @@ function HomeAbout() {
             <Carousel className='mb-xxl'>
                 <CarouselImage title='DGK – “Bubble Up”' href='/projects/dgk-bubble-up' description='Corner store vibes meet skate energy in a playful, high-style collab for DGK x GRAV.' imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/fe61ee07-0265-42e2-5a15-d6c72d638b00/public' />
                 <CarouselImage title='LRG – “Find Your Higher Self”' href='/projects/lrg-find-your-self' description='An ecommerce experience driven by patagonias brand mission' imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/b2b0e60c-ee9a-49ae-97d4-40e7a2191600/public' />
-                <CarouselImage title='MOD Bikes' description='Studio product photography showcasing the craftsmanship and design of Austin’s premier e-bike brand.' imageSrc='https://static.wixstatic.com/media/f86d1e_5f7bad2c10c34ce3b1b408d0c48302af~mv2.jpg/v1/fill/w_451,h_258,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f86d1e_5f7bad2c10c34ce3b1b408d0c48302af~mv2.jpg' />
+                <CarouselImage title='MOD Bikes' description='Studio product photography showcasing the craftsmanship and design of Austin’s premier e-bike brand.' imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/4ebef73e-1626-44d7-6d7e-f23a671de900/public' />
             </Carousel>
             <hr className='border-1 mb-xxxl' />
         </div>
