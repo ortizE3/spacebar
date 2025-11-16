@@ -44,20 +44,51 @@ function Header() {
             <div className={`spacebar-header-container items-center ${isBlackFont ? 'spacebar-black-font' : 'spacebar-white-font'}`}>
                 <div className='header-container flex flex-col border-box'>
                     <div className='flex justify-between items-center'>
-                        <img className='spacebar-header-container-img spacebar-header-container-link' src={spacebar} onClick={() => {
-                            navigate('/')
-                        }}></img>
+                        <button
+                            className='no-button'
+                            onClick={() => navigate('/')}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    navigate('/');
+                                }
+                            }}
+                            aria-label="Navigate to home page"
+                        >
+                            <img className='spacebar-header-container-img spacebar-header-container-link' src={spacebar} alt="Spacebar Creative logo" />
+                        </button>
                         {!showMenu && isMobile &&
-                            <h2 className='m-0'>
-                                <a className='spacebar-header-mobile-menu-text secondary-font-bold spacebar-header-container-link uppercase' onClick={() => {
-                                    setShowMenu(!showMenu)
-                                }}>menu</a>
-                            </h2>
+                            <button
+                                className='no-button'
+                                onClick={() => setShowMenu(!showMenu)}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        setShowMenu(!showMenu);
+                                    }
+                                }}
+                                aria-label="Open navigation menu"
+                                aria-expanded={showMenu}
+                            >
+                                <h2 className='m-0 spacebar-header-mobile-menu-text secondary-font-bold spacebar-header-container-link uppercase'>
+                                    menu
+                                </h2>
+                            </button>
                         }
                         {showMenu && isMobile &&
-                            <img className='spacebar-header-container-img' src={close} onClick={() => {
-                                setShowMenu(false)
-                            }}></img>
+                            <button
+                                className='no-button'
+                                onClick={() => setShowMenu(false)}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        setShowMenu(false);
+                                    }
+                                }}
+                                aria-label="Close navigation menu"
+                            >
+                                <img className='spacebar-header-container-img' src={close} alt="Close menu" />
+                            </button>
                         }
                         {!isMobile &&
                             <div className='w-100 flex justify-center'>
@@ -75,10 +106,15 @@ function Header() {
 
 
             {
-                <menu className='flex flex-col border-box h-100vh justify-between spacebar-header-mobile-menu' style={{
-                    opacity: showMenu && isMobile ? 1 : 0,
-                    zIndex: showMenu && isMobile ? 1000 : -1000
-                }}>
+                <nav
+                    className='header-container flex flex-col border-box h-100vh justify-between spacebar-header-mobile-menu'
+                    style={{
+                        opacity: showMenu && isMobile ? 1 : 0,
+                        zIndex: showMenu && isMobile ? 1000 : -1000
+                    }}
+                    aria-label="Main navigation"
+                    aria-hidden={!showMenu || !isMobile}
+                >
                     <div className='mt-xxxl uppercase spacebar-white-font'>
                         <h1><Link onClick={closeMenu} to='/'>Home</Link></h1>
                         <h1><Link onClick={closeMenu} to='/about'>About</Link></h1>
@@ -86,9 +122,9 @@ function Header() {
                     </div>
 
                     <div>
-                        <img className='spacebar-header-container-menu-bottom-img mb-md' src={sbc} ></img>
+                        <img className='spacebar-header-container-menu-bottom-img mb-md' src={sbc} alt="Spacebar Creative" />
                     </div>
-                </menu>
+                </nav>
             }
         </>
 

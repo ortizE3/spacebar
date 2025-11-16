@@ -38,7 +38,7 @@ function DgkMadeSurvive() {
                     <CarouselImage imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/6fe1b831-feb5-4db4-fd9e-f4d363dce000/public' />
                     <CarouselImage imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/f1f930dd-f0ba-4608-7a0a-616339a83200/public' />
                 </Carousel>
-                <HeroImage src='https://grav.com/cdn/shop/files/dgkmts_hero_bg.jpg?v=1721189572&width=2000' />
+                <HeroImage src='https://grav.com/cdn/shop/files/dgkmts_hero_bg.jpg?v=1721189572&width=2000' alt="DGK Made 2 Survive campaign hero image" />
             </div>
         </>
 

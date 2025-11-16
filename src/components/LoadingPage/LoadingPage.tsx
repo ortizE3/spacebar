@@ -15,7 +15,7 @@ function PageLoadingDrawer() {
         <>
             <div className={`loading-page-container ${!loadingPage ? 'done-loading' : 'hide'}`} >
                 <div className={`loading-page-img-container ${!loadingPage ? 'grow-container' : ''}`}>
-                    <img className={`${!loadingPage ? 'shrink-text' : ''}`} src={spacebar} />
+                    <img className={`${!loadingPage ? 'shrink-text' : ''}`} src={spacebar} alt="Loading Spacebar Creative" />
                 </div>
             </div>
         </>

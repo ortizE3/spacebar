@@ -16,7 +16,7 @@ function HomeAbout() {
                     <SpaceBarButton className='mb-xl spacebar-home-about-button' onClick={() => navigate('/work')}>see the work</SpaceBarButton>
                 </div>
                 <div className='spacebar-home-about-img-container'>
-                    <img className='spacebar-home-about-img' src={sbc} />
+                    <img className='spacebar-home-about-img' src={sbc} alt="Spacebar Creative team working" />
                 </div>
             </div>
 

@@ -3,8 +3,8 @@ import './Footer.scss'
 
 function Footer() {
     return (
-        <div className='footer-container spacebar-black-background'>
-            <img className='footer-img' src={spacebar} />
+        <footer className='footer-container spacebar-black-background'>
+            <img className='footer-img' src={spacebar} alt="Spacebar Creative logo" />
             <h3 className='mt-xl w-50'>
                 <span>
                     We team up with ambitious brands and people who want to stand out. Let’s build something awesome together.&nbsp;
@@ -31,7 +31,7 @@ function Footer() {
                 <a><p className='spacebar-muted-font  m-0'>LinkedIn</p></a>
                 <a><p className='spacebar-muted-font  m-0'>Facebook</p></a>
             </div> */}
-        </div>
+        </footer>
     )
 }
 

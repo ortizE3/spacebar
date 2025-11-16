@@ -63,11 +63,13 @@ function HomeProject() {
 
             <div className="flex flex-col gap-lg home-project-input ">
                 <div>
-                    <SpaceBarInput id='email-title' placeholder="What do you need?" onChange={onTitleChange} error={titleError} errorMessage={errorMessage}></SpaceBarInput>
+                    <label htmlFor='email-title' className="sr-only">What do you need?</label>
+                    <SpaceBarInput id='email-title' placeholder="What do you need?" onChange={onTitleChange} error={titleError} errorMessage={errorMessage} aria-label="What do you need?" aria-required="true" aria-invalid={titleError}></SpaceBarInput>
                 </div>
 
                 <div>
-                    <SpaceBarTextArea id='email-body' placeholder="Tell us about your vision..." onChange={onSubjectChange} error={subjectError} errorMessage={errorMessage}></SpaceBarTextArea>
+                    <label htmlFor='email-body' className="sr-only">Tell us about your vision</label>
+                    <SpaceBarTextArea id='email-body' placeholder="Tell us about your vision..." onChange={onSubjectChange} error={subjectError} errorMessage={errorMessage} aria-label="Tell us about your vision" aria-required="true" aria-invalid={subjectError}></SpaceBarTextArea>
                 </div>
 
             </div>

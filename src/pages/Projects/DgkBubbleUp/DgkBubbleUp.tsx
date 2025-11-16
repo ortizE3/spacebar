@@ -38,7 +38,7 @@ function DgkBubbleUp() {
                     <CarouselImage imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/2e173816-bd7f-4c7c-c81e-fb11e18fa400/public' />
                     <CarouselImage imageSrc='https://imagedelivery.net/l-nGdq_yShSgiYDSPwYs7A/0cbc0622-2c6d-4786-551f-0dd847d28800/public' />
                 </Carousel>
-                <HeroImage src='https://grav.com/cdn/shop/files/dgkbubble_header.jpg?v=1721195341&width=2000' />
+                <HeroImage src='https://grav.com/cdn/shop/files/dgkbubble_header.jpg?v=1721195341&width=2000' alt="DGK Bubble Up campaign hero image" />
             </div>
         </div>
     )

@@ -8,7 +8,7 @@ function CarouselImage(props: CarouselImageProps) {
         return (
             <>
                 <div>
-                    <img src={props.imageSrc}></img>
+                    <img src={props.imageSrc} alt={props.title || props.description || 'Carousel image'} />
                 </div>
                 {props.title && <h2 className='sb-semibold'>{props.title}</h2>}
             </>
