@@ -28,8 +28,12 @@
         transform: translateY(0)
     }
 
-    to {
+    99% {
         transform: translateY(-100%)
+    }
+
+    to {
+        transform: translateY(-200%)
     }
 }
 

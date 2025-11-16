@@ -2,7 +2,7 @@ import './AboutMessage.scss'
 
 function AboutMessage() {
     return (
-        <div className='app-container h-100vh border-box space-gray-background flex flex-col justify-center pt-xxxl'>
+        <div className='app-container h-100vh border-box space-gray-background-effect flex flex-col justify-center pt-xxxl'>
 
             <span className='grow-container'>
                 <h1 className='uppercase sb-bold secondary-font-bold grow-text m-0 work-about-header-font'>WE TURN IDEAS</h1>

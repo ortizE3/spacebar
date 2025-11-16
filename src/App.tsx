@@ -35,6 +35,7 @@ function App() {
   return (
     <>
       {shouldLoad && <PageLoadingDrawer />}
+      <div className='background-effect'></div>
       <>
         <Hide hide={loadingPage}>
           <Header />

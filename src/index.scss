@@ -119,3 +119,22 @@ body {
     @warn "Invalid breakpoint: #{$breakpoint}.";
   }
 }
+
+@keyframes space-gray-background-effect {
+  0% {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: var(--spacebar-gray);
+  }
+}
+
+
+.space-gray-background-effect {
+  background-color: transparent;
+  animation-name: space-gray-background-effect;
+  animation-duration: 2s;
+  animation-delay: 3ms;
+  animation-fill-mode: forwards;
+}
