@@ -19,10 +19,6 @@
     scroll-snap-align: start;
 }
 
-.spacebar-carousel-scrollbar-none {
-    scrollbar-width: none;
-}
-
 .spacebar-carousel-scrollbar::-webkit-scrollbar-thumb {
     background-color: var(--spacebar-black);
     cursor: pointer;
