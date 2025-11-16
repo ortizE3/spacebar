@@ -30,7 +30,7 @@ export function useInView<T extends HTMLElement>(
 ) {
     const ref = useRef<T | null>(null);
     const [isInView, setIsInView] = useState(false);
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const timeoutRef = useRef<any>(null);
 
     useEffect(() => {
         if (!ref.current) return;
