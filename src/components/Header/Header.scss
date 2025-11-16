@@ -16,6 +16,11 @@ $header-height: 70px;
 
 .spacebar-header-container-link {
     cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+
+.spacebar-header-container-link:hover {
+    transform: scale(1.1);
 }
 
 .spacebar-header-mobile-menu {
