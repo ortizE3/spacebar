@@ -1,13 +1,11 @@
 import ProjectHero from '../../../components/ProjectHero/ProjectHero'
 import ProjectDescription from '../../../components/ProjectDescription/ProjectDescription'
+import { VideoLinks } from '../../../constants/VideoLinks'
 
 function GravPleasuresBreatheAgain() {
     return (
         <>
-            <ProjectHero
-                dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0fb84d0b0e450e86754a8288bfd741da/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0fb84d0b0e450e86754a8288bfd741da/manifest/video.m3u8"
-            />
+            <ProjectHero videoSrc={VideoLinks.GravPleasuresBreatheAgain} />
             <div className='app-container'>
 
                 <ProjectDescription

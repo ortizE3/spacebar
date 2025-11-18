@@ -1,6 +1,10 @@
+import type { CloudFlareVideo } from "../CloudFlareVideo";
+
 export class CloudflareVideoProps {
-    dashSrc: string = ''; // .mpd
-    hlsSrc: string = '';  // .m3u8
+    videoSrc: CloudFlareVideo = {
+        hlsSrc: '',
+        dashSrc: ''
+    };
     autoPlay?: boolean;
     inView?: boolean;
     loop?: boolean;

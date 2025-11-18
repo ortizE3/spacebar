@@ -1,13 +1,11 @@
 import ProjectDescription from '../../../components/ProjectDescription/ProjectDescription'
 import ProjectHero from '../../../components/ProjectHero/ProjectHero'
+import { VideoLinks } from '../../../constants/VideoLinks'
 
 function LrgFindYourHigherSelf() {
     return (
         <>
-            <ProjectHero
-                dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/65a3b14f907ea633f0e83fa9f8684df8/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/65a3b14f907ea633f0e83fa9f8684df8/manifest/video.m3u8"
-            />
+            <ProjectHero videoSrc={VideoLinks.LrgFindYourHigherSelf} />
             <div className='app-container'>
                 <ProjectDescription
                     projectType={{

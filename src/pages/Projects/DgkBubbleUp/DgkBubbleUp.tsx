@@ -3,14 +3,12 @@ import CarouselImage from "../../../components/CarouselImage/CarouselImage"
 import HeroImage from "../../../components/HeroImage/HeroImage"
 import ProjectDescription from "../../../components/ProjectDescription/ProjectDescription"
 import ProjectHero from "../../../components/ProjectHero/ProjectHero"
+import { VideoLinks } from "../../../constants/VideoLinks"
 
 function DgkBubbleUp() {
     return (
         <div>
-            <ProjectHero
-                dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/730d9e590ea661c092a4dde21bd2348c/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/730d9e590ea661c092a4dde21bd2348c/manifest/video.m3u8"
-            />
+            <ProjectHero videoSrc={VideoLinks.DgkBubbleUp} />
             <div className="app-container">
 
                 <ProjectDescription

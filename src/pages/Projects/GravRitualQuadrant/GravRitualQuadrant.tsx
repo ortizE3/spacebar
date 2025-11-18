@@ -1,13 +1,11 @@
 import ProjectHero from '../../../components/ProjectHero/ProjectHero'
 import ProjectDescription from '../../../components/ProjectDescription/ProjectDescription'
+import { VideoLinks } from '../../../constants/VideoLinks'
 
 function GravRitualQuadrant() {
     return (
         <>
-            <ProjectHero
-                dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/0d787ffbc3b9badc7b4d5f2c1d50ff4c/manifest/video.m3u8"
-            />
+            <ProjectHero videoSrc={VideoLinks.GravRitualQuadrant} />
             <div className='app-container'>
                 <ProjectDescription
                     projectType={{

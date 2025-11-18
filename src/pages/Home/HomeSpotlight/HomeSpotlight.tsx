@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import CloudflareVideo from '../../../components/CloudflareVideo/CloudflareVideo'
 import SpaceBarButton from '../../../components/SpaceBarButton/SpaceBarButton'
 import './HomeSpotlight.scss'
+import { VideoLinks } from '../../../constants/VideoLinks'
 
 function HomeSpotlight() {
     const navigate = useNavigate()
@@ -9,10 +10,7 @@ function HomeSpotlight() {
         <>
             <div className='spacebar-spotlight-container mb-xxxl'>
                 <div className='spacebar-spotlight-container-img flex justify-center'>
-                    <CloudflareVideo
-                        dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/f6ad8941e7d0063e6853d489d9148f4c/manifest/video.mpd"
-                        hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/f6ad8941e7d0063e6853d489d9148f4c/manifest/video.m3u8"
-                    />
+                    <CloudflareVideo videoSrc={VideoLinks.GravPleasuresBreatheAgainVertical} />
                 </div>
 
                 <div className='w-80'>

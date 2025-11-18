@@ -1,13 +1,11 @@
 import ProjectHero from '../../../components/ProjectHero/ProjectHero'
 import ProjectDescription from '../../../components/ProjectDescription/ProjectDescription'
+import { VideoLinks } from '../../../constants/VideoLinks'
 
 function GravCannabisSpirit() {
     return (
         <>
-            <ProjectHero
-                dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/07fe8a9d507c0bde85fca921b79469e8/manifest/video.m3u8"
-            />
+            <ProjectHero videoSrc={VideoLinks.GravCannabisSpirit} />
             <div className='app-container'>
                 <ProjectDescription
                     projectType={{

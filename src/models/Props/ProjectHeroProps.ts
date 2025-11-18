@@ -1,5 +1,9 @@
+import type { CloudFlareVideo } from "../CloudFlareVideo";
+
 export class ProjectHeroProps {
-    dashSrc?: string = '';
-    hlsSrc?: string = ''
+    videoSrc: CloudFlareVideo = {
+        hlsSrc: '',
+        dashSrc: ''
+    };
     src?: string = '';
 }

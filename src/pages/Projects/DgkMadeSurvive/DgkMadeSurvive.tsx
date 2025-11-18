@@ -3,14 +3,12 @@ import ProjectDescription from '../../../components/ProjectDescription/ProjectDe
 import Carousel from '../../../components/Carousel/Carousel'
 import CarouselImage from '../../../components/CarouselImage/CarouselImage'
 import HeroImage from '../../../components/HeroImage/HeroImage'
+import { VideoLinks } from '../../../constants/VideoLinks'
 
 function DgkMadeSurvive() {
     return (
         <>
-            <ProjectHero
-                dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/cbcb06d0736b8faf8d0bb99cba2125b5/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/cbcb06d0736b8faf8d0bb99cba2125b5/manifest/video.m3u8"
-            />
+            <ProjectHero videoSrc={VideoLinks.DgkMadeSurvive} />
             <div className='app-container'>
 
                 <ProjectDescription

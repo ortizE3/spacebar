@@ -7,8 +7,7 @@ import { usePageVisibility } from "../../hooks/hooks";
 import LoadingPage from "../../context/loading";
 
 const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
-    dashSrc,
-    hlsSrc,
+    videoSrc,
     autoPlay = true,
     loop = true,
     inView = true,
@@ -48,7 +47,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
 
         if (dashjs.supportsMediaSource()) {
             const dashPlayer = dashjs.MediaPlayer().create();
-            dashPlayer.initialize(video, dashSrc, true);
+            dashPlayer.initialize(video, videoSrc.dashSrc, true);
 
             dashPlayer.on(dashjs.MediaPlayer.events.STREAM_INITIALIZED, markLoaded);
             dashPlayer.on(dashjs.MediaPlayer.events.MANIFEST_LOADED, markLoaded);
@@ -59,7 +58,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
 
         if (Hls.isSupported()) {
             const hls = new Hls();
-            hls.loadSource(hlsSrc);
+            hls.loadSource(videoSrc.hlsSrc);
             hls.attachMedia(video);
 
             hls.on(Hls.Events.MANIFEST_PARSED, markLoaded);
@@ -70,7 +69,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
         }
 
         if (video.canPlayType("application/vnd.apple.mpegurl")) {
-            video.src = hlsSrc;
+            video.src = videoSrc.hlsSrc;
         }
     };
 
@@ -80,7 +79,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
             if (hlsRef.current) hlsRef.current.destroy();
             if (dashRef.current) dashRef.current.reset();
         };
-    }, [dashSrc, hlsSrc]);
+    }, [videoSrc.dashSrc, videoSrc.hlsSrc]);
 
     useEffect(() => {
         if (isVisible) initializePlayer();

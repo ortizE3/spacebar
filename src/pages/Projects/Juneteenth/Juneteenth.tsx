@@ -1,13 +1,11 @@
 import ProjectDescription from '../../../components/ProjectDescription/ProjectDescription'
 import ProjectHero from '../../../components/ProjectHero/ProjectHero'
+import { VideoLinks } from '../../../constants/VideoLinks'
 
 function Juneteenth() {
     return (
         <>
-            <ProjectHero
-                dashSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/d9949fea415ebaba7dc224c6cedca798/manifest/video.mpd"
-                hlsSrc="https://customer-e57j07qb5pp0c67r.cloudflarestream.com/d9949fea415ebaba7dc224c6cedca798/manifest/video.m3u8"
-            />
+            <ProjectHero videoSrc={VideoLinks.Juneteenth} />
             <div className='app-container'>
 
                 <ProjectDescription
