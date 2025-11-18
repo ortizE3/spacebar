@@ -118,6 +118,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
                     playsInline
                     className={className}
                     controls={false}
+                    src={videoSrc.hlsSrc}
                 />
             </div>
         </>
