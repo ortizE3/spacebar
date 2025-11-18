@@ -1,31 +1,18 @@
 import type { ProjectHeroProps } from '../../models/Props/ProjectHeroProps'
 import CloudflareVideo from '../CloudflareVideo/CloudflareVideo'
-import HeroImage from '../HeroImage/HeroImage'
 import './ProjectHero.scss'
 
 function ProjectHero(props: ProjectHeroProps) {
     return (
         <>
-            {props.videoSrc.hlsSrc && props.videoSrc.dashSrc &&
-                <div className='flex flex-col items-center justify-center'>
-                    <div className='hero-image-container'>
-                        <CloudflareVideo
-                            checkPageLoading
-                            videoSrc={props.videoSrc}
-                        />
-                    </div>
-
-                    {props.src && <HeroImage src={props.src} />}
-                </div >
-            }
-
-            {props.src &&
-                <>
-                    <div className='flex items-center justify-center hero-image-container'>
-                        {props.src && <HeroImage src={props.src} />}
-                    </div>
-                </>
-            }
+            <div className='flex flex-col items-center justify-center'>
+                <div className='hero-image-container'>
+                    <CloudflareVideo
+                        checkPageLoading
+                        videoSrc={props.videoSrc}
+                    />
+                </div>
+            </div >
         </>
 
     )
