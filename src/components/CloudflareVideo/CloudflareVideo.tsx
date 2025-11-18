@@ -110,7 +110,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
         <>
             <div className="cloudflare-video-container">
                 <video
-                    preload="auto"
+                    preload="none"
                     ref={videoRef}
                     autoPlay={autoPlay}
                     muted
@@ -118,7 +118,7 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
                     playsInline
                     className={className}
                     controls={false}
-                    src={videoSrc.hlsSrc}
+                    src=""
                 />
             </div>
         </>
