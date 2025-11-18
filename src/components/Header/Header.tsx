@@ -70,7 +70,7 @@ function Header() {
                                 aria-label="Open navigation menu"
                                 aria-expanded={showMenu}
                             >
-                                <h2 className='m-0 spacebar-header-mobile-menu-text secondary-font-bold spacebar-header-container-link uppercase'>
+                                <h2 className='m-0 spacebar-black-font spacebar-header-mobile-menu-text secondary-font-bold spacebar-header-container-link uppercase'>
                                     menu
                                 </h2>
                             </button>
@@ -101,10 +101,7 @@ function Header() {
                         }
                     </div>
                 </div>
-
             </div>
-
-
             {
                 <nav
                     className='header-container flex flex-col border-box h-100vh justify-between spacebar-header-mobile-menu'
@@ -120,7 +117,6 @@ function Header() {
                         <h1><Link onClick={closeMenu} to='/about'>About</Link></h1>
                         <h1><Link onClick={closeMenu} to='/work'>Work</Link></h1>
                     </div>
-
                     <div>
                         <img className='spacebar-header-container-menu-bottom-img mb-md' src={sbc} alt="Spacebar Creative" />
                     </div>
