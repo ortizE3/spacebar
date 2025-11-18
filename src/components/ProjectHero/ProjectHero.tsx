@@ -1,5 +1,6 @@
 import type { ProjectHeroProps } from '../../models/Props/ProjectHeroProps'
 import CloudflareVideo from '../CloudflareVideo/CloudflareVideo'
+import HeroImage from '../HeroImage/HeroImage'
 import './ProjectHero.scss'
 
 function ProjectHero(props: ProjectHeroProps) {
@@ -11,9 +12,20 @@ function ProjectHero(props: ProjectHeroProps) {
                         <CloudflareVideo
                             checkPageLoading
                             videoSrc={props.videoSrc}
+
                         />
                     </div>
+
+                    {props.src && <HeroImage src={props.src} />}
                 </div >
+            }
+
+            {props.src &&
+                <>
+                    <div className='flex items-center justify-center hero-image-container'>
+                        {props.src && <HeroImage src={props.src} />}
+                    </div>
+                </>
             }
         </>
 

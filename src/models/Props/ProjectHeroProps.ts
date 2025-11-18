@@ -5,4 +5,5 @@ export class ProjectHeroProps {
         hlsSrc: '',
         dashSrc: ''
     };
+    src?: string = '';
 }
