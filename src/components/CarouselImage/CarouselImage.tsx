@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { CarouselImageProps } from '../../models/Props/CarouselImageProps'
 import './CarouselImage.scss'
 
@@ -17,9 +18,9 @@ function CarouselImage(props: CarouselImageProps) {
 
     return (
         <div className='spacebar-carousel-image-container uppercase mb-lg'>
-            {props.href && <a className='w-100' href={props.href}>
+            {props.href && <Link className='w-100' to={props.href}>
                 {getImage()}
-            </a>}
+            </Link>}
             {!props.href &&
                 <>
                     {getImage()}
