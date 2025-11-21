@@ -12,7 +12,7 @@ import './classes/size.scss';
 import './classes/link.scss';
 import './classes/select.scss';
 import { BrowserRouter } from 'react-router-dom';
-import { LoadingPageProvider } from './Providers/LoadingPageProvider.tsx';
+import { LoadingPageProvider } from './providers/LoadingPageProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
