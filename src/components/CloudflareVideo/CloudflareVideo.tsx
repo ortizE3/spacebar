@@ -107,21 +107,19 @@ const CloudflareVideo: React.FC<CloudflareVideoProps> = ({
     }, [inView, isVisible]);
 
     return (
-        <>
-            <div className="cloudflare-video-container">
-                <video
-                    preload="none"
-                    ref={videoRef}
-                    autoPlay={autoPlay}
-                    muted
-                    loop={loop}
-                    playsInline
-                    className={className}
-                    controls={false}
-                    src=""
-                />
-            </div>
-        </>
+        <div className="cloudflare-video-container">
+            <video
+                preload="auto"
+                ref={videoRef}
+                autoPlay={autoPlay}
+                muted
+                loop={loop}
+                playsInline
+                className={className}
+                controls={false}
+                src=""
+            />
+        </div>
 
     );
 };
