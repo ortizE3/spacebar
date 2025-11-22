@@ -22,6 +22,7 @@ import { useContext, useLayoutEffect, useState } from 'react'
 import PageLoadingDrawer from './components/LoadingPage/LoadingPage'
 import Hide from './components/Hide/Hide'
 import LoadingPage from './context/loading'
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
   const location = useLocation();
@@ -54,6 +55,7 @@ function App() {
             <Route path="/projects/buffalo-boxing" element={<BuffaloBoxing />} />
             <Route path="/projects/whambam-coffee" element={<WhambamCoffee />} />
             <Route path="/projects/mod-bikes" element={<ModBikes />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </Hide>
